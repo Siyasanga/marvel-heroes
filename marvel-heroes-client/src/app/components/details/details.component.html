@@ -1,0 +1,155 @@
+<div class="details-container">
+    <div class="details-inner-container">
+        <div class="drag-input" >
+            <p class="drag-label">Drag Character Here</p>
+            <div class="drag-target" cdkDropList id="activeCharacter" (cdkDropListDropped)="drop($event)">{{profile.name}}</div>
+        </div>
+        <div class="info-box">
+            <p class="info-label">Displayed Character Info</p>
+            <div class="details-box">
+                <p class="name">{{profile.name}}</p>
+                <div class="img-wrapper">
+                    <img [src]="profile.imagePath" alt="Picture of Marvel character">
+                </div>
+                <div class="comic-story-list">
+                    <ul class="stories">
+                        <li class="headings">STORIES</li>
+                        <li class="list-item" *ngFor="let story of profile.stories">{{story.title}}</li>
+                    </ul>
+                    <ul class="comics">
+                        <li class="headings">COMICS</li>
+                        <li class="list-item" *ngFor="let comic of profile.comics">{{comic.title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    
+    .details-container
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .details-inner-container
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .drag-input
+    {
+        width: 100%;
+        height: 15%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        margin-bottom: 6%;
+
+    }
+    .drag-label
+    {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-weight: 550;
+    }
+    .drag-target
+    {
+        height: 50%;
+        width: 80%;
+        margin: auto;
+        color: rgb(19, 19, 19);
+        background-color: lavender;
+        padding: 3%;
+        overflow: hidden;
+
+    }
+    .info-box
+    {
+        display: block;
+        width: 100%;
+        height: 79%;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-label
+    {
+        height: 12%;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        display: block;
+        align-items: center;
+        font-weight: 550;
+        font-size: 1.5rem;
+        padding-top: 2.5%;
+    }
+    .details-box
+    {
+        display: block;
+    }
+    .details-box
+    {
+        width: 100%;
+        height: 80%;
+    }
+    .details-box p, li
+    {
+        height: auto;
+        max-height: 30px;
+    }
+
+    ul
+    {
+        height: auto;
+        margin-bottom: 5%;
+        list-style:none;
+        margin-left: 5%;
+
+    }
+
+    .name
+    {
+        display: flex;
+        justify-content: center;
+
+    }
+    .img-wrapper
+    {
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        position: relative;
+        background-color: lavender;
+    }
+    .headings
+    {
+        font: 800;
+        font-weight: bolder;
+    }
+
+    .comic-story-list
+    {
+        overflow: hidden auto;
+        height: 55%;
+        margin-top: 1%;
+    }
+    .list-item
+    {
+        text-overflow: ellipsis;
+        word-break: normal;
+        width: 90%;
+        overflow: hidden;
+    }
+</style>

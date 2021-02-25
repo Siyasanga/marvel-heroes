@@ -1,0 +1,70 @@
+<div class="app-container">
+  <div class="app-wrapper">
+    <div class="app-inner-container">
+      <section class="list-section">
+        <div class="characters-wrapper">
+          <app-characters></app-characters>
+        </div>
+      </section>
+      <section class="details-section">
+        <div class="details-wrapper">
+          <app-details></app-details>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<style>
+  .app-wrapper
+  {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    vertical-align: middle;
+    top: 10%;
+  }
+  .app-inner-container
+  {
+    justify-content: center;
+    display: flex;
+  }
+  .characters-wrapper
+  {
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+  }
+
+  section
+  {
+    width: 50%;
+    background-color: rgb(145, 200, 214);
+    display: flex;
+    justify-content: center;
+  }
+
+  .details-section
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .details-wrapper
+  {
+    width: 60%;
+    background-color: rgb(95, 95, 95);
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
